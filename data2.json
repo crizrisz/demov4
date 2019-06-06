@@ -1,0 +1,237 @@
+[
+  {
+    "_id": "5c6f78f08e401ca6881ab749",
+    "index": 0,
+    "Group": 1,
+    "checklist": "พวงมาลัย",
+    "regulation": false,
+    "specification": [
+      {
+        "id": 0,
+        "name": "OK",
+        "correct": true
+      },
+      {
+        "id": 1,
+        "name": "NG",
+        "correct": false
+      }
+    ],
+    "torque": false
+  },
+  {
+    "_id": "5c6f78f0d56c50035e8cc102",
+    "index": 1,
+    "Group": 1,
+    "checklist": "เบาะหน้า LH",
+    "regulation": true,
+    "specification": [
+      {
+        "id": 0,
+        "name": "OK",
+        "correct": true
+      },
+      {
+        "id": 1,
+        "name": "NG",
+        "correct": false
+      }
+    ],
+    "torque": false
+  },
+  {
+    "_id": "5c6f78f0998c591a7125e7ca",
+    "index": 2,
+    "Group": 1,
+    "checklist": "ขาคลัตช์",
+    "regulation": true,
+    "specification": [
+      {
+        "id": 0,
+        "name": "OK",
+        "correct": true
+      },
+      {
+        "id": 1,
+        "name": "NG",
+        "correct": false
+      }
+    ],
+    "torque": true
+  },
+  {
+    "_id": "5c6f78f008eb41c13fa517ab",
+    "index": 3,
+    "Group": 2,
+    "checklist": "ID PLATE",
+    "regulation": true,
+    "specification": [
+      {
+        "id": 0,
+        "name": "8983285870",
+        "correct": false
+      },
+      {
+        "id": 1,
+        "name": "8958746987",
+        "correct": true
+      },
+      {
+        "id": 2,
+        "name": "อื่นๆ",
+        "correct": false
+      }
+    ],
+    "torque": false
+  },
+  {
+    "_id": "5c6f78f08bd2ff3a979b8948",
+    "index": 4,
+    "Group": 2,
+    "checklist": "ไฟหน้า LH",
+    "regulation": true,
+    "specification": [
+      {
+        "id": 0,
+        "name": "Helohen, LHD",
+        "correct": true
+      },
+      {
+        "id": 1,
+        "name": "Projector, LHD,สีแดง",
+        "correct": false
+      },
+      {
+        "id": 2,
+        "name": "อื่นๆ",
+        "correct": false
+      }
+    ],
+    "torque": false
+  },
+  {
+    "_id": "5c6f78f042fa3b3bc0b427b1",
+    "index": 5,
+    "Group": 2,
+    "checklist": "สายไฟ ; E/ROOM",
+    "regulation": false,
+    "specification": [
+      {
+        "id": 0,
+        "name": "8973280874",
+        "correct": false
+      },
+      {
+        "id": 1,
+        "name": "8973547896",
+        "correct": true
+      },
+      {
+        "id": 2,
+        "name": "อื่นๆ",
+        "correct": false
+      }
+    ],
+    "torque": false
+  },
+  {
+    "_id": "5c6f78f0d85c1a0c3156c9e2",
+    "index": 6,
+    "Group": 3,
+    "checklist": "VIN PLATE;ที่กระจกหน้า",
+    "regulation": true,
+    "specification": [
+      {
+        "id": 0,
+        "name": "มีติดตั้ง",
+        "correct": true
+      },
+      {
+        "id": 1,
+        "name": "ไม่มีติดตั้ง",
+        "correct": false
+      },
+      {
+        "id": 2,
+        "name": "-",
+        "correct": false
+      }
+    ],
+    "torque": false
+  },
+  {
+    "_id": "5c6f78f0e035ad0e1c4aa469",
+    "index": 7,
+    "Group": 3,
+    "checklist": "เสาอากาศ",
+    "regulation": true,
+    "specification": [
+      {
+        "id": 0,
+        "name": "สีเทา,เทบเหลือง",
+        "correct": false
+      },
+      {
+        "id": 1,
+        "name": "สีแดง,เทบน้ำเงิน",
+        "correct": true
+      },
+      {
+        "id": 2,
+        "name": "อื่นๆ",
+        "correct": false
+      }
+    ],
+    "torque": false
+  },
+  {
+    "_id": "5c6f78f09d5db3514b0551b6",
+    "index": 8,
+    "Group": 3,
+    "checklist": "Mark Z",
+    "regulation": true,
+    "specification": [
+      {
+        "id": 0,
+        "name": "Z",
+        "correct": true
+      },
+      {
+        "id": 1,
+        "name": "Z-Prestige",
+        "correct": false
+      },
+      {
+        "id": 2,
+        "name": "อื่นๆ",
+        "correct": false
+      }
+    ],
+    "torque": false
+  },
+  {
+    "_id": "5c6f78f02a63851d8ebb0063",
+    "index": 9,
+    "Group": 3,
+    "checklist": "ขาเบรค",
+    "regulation": true,
+    "specification": [
+      {
+        "id": 0,
+        "name": "898965874",
+        "correct": false
+      },
+      {
+        "id": 1,
+        "name": "895874563",
+        "correct": true
+      },
+      {
+        "id": 2,
+        "name": "อื่นๆ",
+        "correct": false
+      }
+    ],
+    "torque": true
+  }
+]

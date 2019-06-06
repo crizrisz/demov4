@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Material Design Bootstrap</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+  <link rel="stylesheet" href="./plugins/sweetaleart2/dist/sweetalert2.min.css">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="css/mdb.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/material.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <!-- Your custom styles (optional) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css">
+
+  <style>
+    
+    .demo-layout-transparent {
+      background: rgb(164,132,238);
+      background: linear-gradient(180deg, rgba(164,132,238,1) 0%, rgba(46,28,102,1) 100%);
+    }
+
+    /* .hot{
+      background : rgb(241,39,17);
+      background :  linear-gradient(0deg, rgba(241,39,17,1) 0%, rgba(245,175,25,1) 100%);
+    } */
+
+    .demo-layout-transparent .mdl-layout__header,
+    .demo-layout-transparent .mdl-layout__drawer-button,
+    .demo-layout-transparent .mdl-layout__content {
+      color: white;
+    }
+
+    .convertData {
+      border: 2px solid #fff!important;
+      color: #fff;
+      border-radius: 30px;
+      background-color: transparent;
+    }
+
+  </style>
+
+</head>
+
+<body id="bodyCon">
+<!-- Start your project here-->
+<div class="demo-layout-transparent mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs">
+  <header class="mdl-layout__header mdl-layout__header--transparent">
+      <div class="mdl-layout__header-row">
+      <!-- Title -->
+          <span class="mdl-layout-title">Web Services Demo</span>
+          <div class="mdl-layout-spacer"></div>
+      </div>
+  </header>
+      
+  <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title">
+          <img src="./img/profile-pic.jpg" alt="profilepic" id="profile-pic">
+          <span id="profile-info">
+          <p>Username : Jane Doe</p>
+          </span>
+        </span>   
+        <!-- Navigation -->
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" id="convert" href="convert.php">Convert</a>
+        </nav>
+  </div>
+
+  <main class="mdl-layout__content">
+      <div class="page-content">
+        <div class="container pt-2 text-center">
+          <div class="row justify-content-md-center">
+            <div class="col-sm-12">
+              <h4 class="text-heading">Convert Fahrenheit to Celsius</h4>
+            </div>
+            <div class="col-sm-6 mb-3">
+              <h5 class="text-subheading">Fahrenheit</h5>
+              <div class="md-form">
+                <input type="text" pattern="[0-9]*" inputmode="numeric" id="input1" class="form-control text-center form-control-lg text-white">                
+              </div>
+            </div>
+            <div class="col-sm-12 my-4 text-center">
+              <div class="p-3 col-sm-8 offset-sm-2 cardCel">
+                <h5 class="text-subheading m-0">Celsius</h5>
+                <div class="row " id="iconTemp">
+                  <div class="col-sm-12 align-self-center" id="imgTemp">
+                      <!-- <img class="animated bounceInLeft" src="./img/profile-pic.jpg"> -->
+                  </div>
+                </div>
+                <h1 id="output1">0.0 °C</h1>
+              </div>
+            </div>
+          </div>
+          <div class="fixed-bottom">
+            <div class="p-3">
+              <a href="#" class="btn waves-effect btn-lg btn-block  convertData">Convert</a>
+            </div>
+          </div>
+  
+        </div>
+      </div>   
+  </main>  
+  
+</div> 
+
+  <!-- /Start your project here-->
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <script src="./plugins/sweetaleart2/dist/sweetalert2.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.js"></script>
+  <script src="./js/material.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+
+      $("#input1").on( "keypress", function(e) {
+        if(e.which == 13){
+          sendParms();
+        }
+      })
+
+      $(".convertData").on( "click", function() {
+        sendParms();
+      });
+ 
+    });
+
+    
+  </script>
+
+  <script>
+    function sendParms() {
+          $.ajax({
+                  url: "http://172.16.1.228:10021/web/services/ftoc/"+$('#input1').val(),
+                  method: "GET",
+                  crossDomain: true,
+                  // contentType: "application/json",
+                  // dataType: "json",
+                  headers: {          
+                    Accept: "application/json; charset=utf-8",          
+                  },
+                  success: function(data) {
+                    $("#output1").text(data.TEMPOUT +" °C"); 
+                    if (data.TEMPOUT > 36) {
+                      console.log("hot");
+
+                      $("#imgTemp").children().addClass('bounceOutRight');
+                      var del = function(){
+                        $("#imgTemp").find('img:first').remove();
+                      };
+                      var add = function(){
+                        $("#imgTemp").append('<img class="animated bounceInLeft" src="./img/sun.png" width="150" height="150">');
+                      };
+                      if ($("#imgTemp").children().length != 0) {
+                        setTimeout(del, 500);
+                      }
+                      if ($("#imgTemp").children().length == 0) {
+                        setTimeout(add, 100);
+                      }else{
+                        setTimeout(add, 750);
+                      }
+
+                    }               
+                    if (data.TEMPOUT < 10) {
+                      console.log("could");
+
+                      $("#imgTemp").children().addClass('bounceOutRight');
+                      var del = function(){
+                        $("#imgTemp").find('img:first').remove();
+                      };
+                      var add = function(){
+                        $("#imgTemp").append('<img class="animated bounceInLeft" src="./img/cold.png" width="150" height="150">');
+                      };
+                      if ($("#imgTemp").children().length != 0) {
+                        setTimeout(del, 500);
+                      }
+                      if ($("#imgTemp").children().length == 0) {
+                        setTimeout(add, 100);
+                      }else{
+                        setTimeout(add, 750);
+                      }
+
+                    } 
+
+                    if (data.TEMPOUT > 10 && data.TEMPOUT < 36) {
+                      console.log("could");
+
+                      $("#imgTemp").children().addClass('bounceOutRight');
+                      var del = function(){
+                        $("#imgTemp").find('img:first').remove();
+                      };
+                      var add = function(){
+                        $("#imgTemp").append('<img class="animated bounceInLeft" src="./img/cloud.png" width="150" height="150">');
+                      };
+                      if ($("#imgTemp").children().length != 0) {
+                        setTimeout(del, 500);
+                      }
+                      if ($("#imgTemp").children().length == 0) {
+                        setTimeout(add, 100);
+                      }else{
+                        setTimeout(add, 750);
+                      }
+
+                    }
+                  },
+                  error: function (request, status, error, xhr) {
+                      console.log(error,request);
+                  }
+            });//end ajax
+        }
+  </script>
+</body>
+
+</html>

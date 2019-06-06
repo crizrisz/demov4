@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Material Design Bootstrap</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="css/mdb.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/material.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <!-- Your custom styles (optional) -->
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css">
+
+</head>
+
+<body>
+<!-- Start your project here-->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs">
+  <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+      <!-- Title -->
+          <span class="mdl-layout-title">Specification List</span>
+          <div class="mdl-layout-spacer"></div>
+          <button class="mdl-button mdl-js-button mdl-js-ripple-effect text-white">
+            save
+          </button>
+      </div>
+          <!-- Tabs -->
+      <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+          <a href="#fixed-tab-1" class="mdl-layout__tab is-active">Group 1</a>
+          <a href="#fixed-tab-2" class="mdl-layout__tab">Group 2</a>
+          <a href="#fixed-tab-3" class="mdl-layout__tab">Group 3</a>
+      </div>
+  </header>
+      
+  <div class="mdl-layout__drawer">
+      <header class="mdl-layout-title">
+          <img src="./img/profile-pic.jpg" alt="profilepic" id="profile-pic">
+          <span id="profile-info">
+              <p>Matthew : Administator</p>
+          </span>
+      </header>   
+  </div>
+
+  <main class="mdl-layout__content" id="ispPage">
+      <div class="page-content">
+          <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
+              <div class="page-content1">
+                  <!-- <div class="demo-card-wide mdl-card" id="ispCard">
+                      <div class="mdl-card__title">
+                        <h5>
+                          <div class="mdl-card__subtitle-text">1/10</div>
+                          <div class="mdl-card__title-text">พวงมาลัย <img src="img/reg.png" width="15%" height="15%"></div> 
+                        </h5> 
+                      </div>
+                      <div class="mdl-card__supporting-text">
+                      </div>
+                      <div class="mdl-card__actions mdl-card--border">
+                          <div class="row mx-0">
+                              <div class="btn-group-toggle p-1 col-sm-3">
+                                  <label class="btn btn-light-blue btn-block form-check-label">
+                                    <input type="checkbox" class="form-check-input" name="option0" id="option0" id-value="0" cor-value="true" value="OK" autocomplete="off">OK
+                                  </label>
+                              </div>
+                              <div class="btn-group-toggle p-1 col-sm-3">
+                                  <label class="btn btn-light-blue btn-block form-check-label">
+                                    <input type="checkbox" class="form-check-input" name="option0" id="option0" id-value="1" cor-value="false" value="NG" autocomplete="off">NG
+                                  </label>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="mdl-card__menu">
+                          <div class="menuIcon">
+                              <div class="material-icons">photo_camera</div>
+                              <div class="material-icons mdl-badge mdl-badge--overlap" data-badge="0">image</div>
+                          </div>
+                          <div class="center-align">
+                              <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised mdl-button--accent" id="detail0" disabled>Detail</button>
+                          </div>
+                      </div>
+                  </div> 
+                  <div class="demo-card-wide mdl-card" id="ispCard">
+                      <div class="mdl-card__title">
+                        <h5>
+                          <div class="mdl-card__subtitle-text">2/10</div>
+                          <div class="mdl-card__title-text">พวงมาลัย <img src="img/reg.png" width="15%" height="15%"></div> 
+                        </h5> 
+                      </div>
+                      <div class="mdl-card__supporting-text">
+                      </div>
+                      <div class="mdl-card__actions mdl-card--border">
+                        <div class="row mx-0">
+                            <div class="btn-group-toggle p-1 col-sm-3">
+                                <label class="btn btn-light-blue btn-block form-check-label">
+                                  <input type="checkbox" class="form-check-input" name="option1" id="option1" id-value="0" cor-value="true" value="OK" autocomplete="off">OK
+                                </label>
+                            </div>
+                            <div class="btn-group-toggle p-1 col-sm-3">
+                                <label class="btn btn-light-blue btn-block form-check-label">
+                                  <input type="checkbox" class="form-check-input" name="option1" id="option1" id-value="1" cor-value="false" value="NG" autocomplete="off">NG
+                                </label>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="mdl-card__menu">
+                          <div class="menuIcon">
+                              <div class="material-icons">photo_camera</div>
+                              <div class="material-icons mdl-badge mdl-badge--overlap" data-badge="0">image</div>
+                          </div>
+                          <div class="center-align">
+                              <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised mdl-button--colored" id="detail1">Detail</button>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="demo-card-wide mdl-card" id="ispCard">
+                      <div class="mdl-card__title">
+                        <h5>
+                          <div class="mdl-card__subtitle-text">3/10</div>
+                          <div class="mdl-card__title-text">พวงมาลัย <img src="img/reg.png" width="15%" height="15%"></div> 
+                        </h5> 
+                      </div>
+                      <div class="mdl-card__supporting-text">
+                      </div>
+                      <div class="mdl-card__actions mdl-card--border">
+                        <div class="row mx-0">
+                            <div class="btn-group-toggle p-1 col-sm-3">
+                                <label class="btn btn-light-blue btn-block form-check-label">
+                                  <input type="checkbox" class="form-check-input" name="option2" id="option2" id-value="0" cor-value="true" value="OK" autocomplete="off">OK
+                                </label>
+                            </div>
+                            <div class="btn-group-toggle p-1 col-sm-3">
+                                <label class="btn btn-light-blue btn-block form-check-label">
+                                  <input type="checkbox" class="form-check-input" name="option2" id="option2" id-value="1" cor-value="false" value="NG" autocomplete="off">NG
+                                </label>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="mdl-card__menu">
+                          <div class="menuIcon">
+                              <div class="material-icons">photo_camera</div>
+                              <div class="material-icons mdl-badge mdl-badge--overlap" data-badge="0">image</div>
+                          </div>
+                          <div class="center-align">
+                              <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised mdl-button--colored" id="detail2">Detail</button>
+                          </div>
+                      </div>
+                  </div> -->
+              </div>
+          </section>
+          <section class="mdl-layout__tab-panel" id="fixed-tab-2">
+              <div class="page-content2">
+               
+              </div>
+          </section>
+          <section class="mdl-layout__tab-panel" id="fixed-tab-3">
+              <div class="page-content3">
+                  
+              </div>
+          </section>
+      </div>   
+  </main>  
+
+</div> 
+  <!-- /Start your project here-->
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.js"></script>
+  <script src="./js/material.min.js"></script>
+
+
+  <script>
+    $(document).ready(function(){
+      $.getJSON("data2.json", function(result){
+        $.each(result, function(i, value){
+          for (let x = 1; x <= 3; x++) {
+            if (value.Group == x) {
+            $(".page-content"+x).append(
+            '<div class="demo-card-wide mdl-card" id="ispCard">'+
+                '<div class="mdl-card__title">'+
+                  '<h5>'+
+                    '<div class="mdl-card__subtitle-text">'+(value.index+1)+"/"+"10"+'</div>'+
+                    '<div class="mdl-card__title-text">'+value.checklist+'<img id="reg'+value.index+'" src="" width="30px" height="30px"></div>'+ 
+                  '</h5>'+
+                '</div>'+
+                '<div class="mdl-card__supporting-text">'+
+                '</div>'+
+                '<div class="mdl-card__actions mdl-card--border">'+
+                    '<div class="row mx-0" id="choice'+value.index+'">'+
+                    '</div>'+
+                '</div>'+
+                '<div class="mdl-card__menu">'+
+                    '<div class="menuIcon">'+
+                        '<div class="material-icons">photo_camera</div>'+
+                        '<div class="material-icons mdl-badge mdl-badge--overlap" data-badge="0">image</div>'+
+                    '</div>'+
+                    '<div class="center-align">'+
+                        '<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="detail'+value.index+'" disabled>Detail</button>'+
+                    '</div>'+
+                '</div>'+
+            '</div>'
+            );
+            value.specification.forEach(element => {
+              console.log(element);
+              $("#choice"+value.index).append(
+                '<div class="btn-group-toggle p-1 col-sm-4">'+
+                  '<label class="btn btn-light-blue btn-block form-check-label">'+
+                    '<input type="checkbox" class="form-check-input" name="option'+value.index+'" id="option'+value.index+'" id-value="'+element.id+'" cor-value="'+element.correct+'" value="'+ element.name+'" autocomplete="off">'+ element.name+
+                  '</label>'+
+                '</div>'
+              )
+            });
+
+            if(value.regulation == true){
+              $("#reg"+value.index).attr('src','img/reg.png');
+            }else{
+              $("#reg"+value.index).attr('src','').css("display","none");
+            }
+          }
+            
+          }                    
+          
+          
+        });
+      });
+    });
+  </script>
+
+  <script>
+    //Event click 
+    $(document).on('click','input:checkbox',function (e){
+      var $box = $(this);
+      var $boxID = $box.attr('id');
+      var res = $boxID.substring(6);
+
+      if ($box.is(":checked")) {
+        var group = "input:checkbox[name='" + $box.attr("name") + "']";
+        $(group).prop("checked", false);
+        $box.prop("checked", true);
+        $(group).parent('label').removeClass("active");
+        $box.parent('label').addClass("active");
+        
+        if($box.attr("cor-value") == "true"){
+          console.log("true");
+          $('#detail'+res).prop( "disabled", true );
+        }else{
+          console.log("false");
+          $('#detail'+res).prop( "disabled", false );
+        }
+        
+      }else {
+        $box.prop("checked", false);
+        $box.parent('label').removeClass("active");
+        $('#detail'+res).prop( "disabled", true );
+        console.log("remove");
+      }
+
+      });//end Event 
+  </script>
+</body>
+
+</html>
